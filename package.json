@@ -1,10 +1,10 @@
 {
-  "name": "file-list",
+  "name": "filels",
   "version": "1.0.0",
   "description": "Get file-list of a path",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test.js"
   },
   "repository": {
     "type": "git",
