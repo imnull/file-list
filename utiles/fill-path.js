@@ -12,10 +12,10 @@ const fill_path = (path, name, option, r) => {
     if(stat.isFile()){
         let { ignores = [], filters = [] } = option;
 
-        if(ignores.length > 0 && (test_some_str(name, ignores) || test_some_str(path, ignores))){
+        if(ignores.length > 0 && (test_some_str(name, ignores))){
             return;
         }
-        if(filters.length < 1 || test_some_str(name, filters) || test_some_str(path, filters)){
+        if(filters.length < 1 || test_some_str(name, filters)){
             r.push(path);
         }
        
