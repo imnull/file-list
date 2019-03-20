@@ -1,7 +1,7 @@
 # filels
 Get file-list of a path
 
-## install
+## Install
 
     $ npm i --save filels
 
