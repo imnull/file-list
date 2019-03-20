@@ -1,6 +1,6 @@
 const fill_path = require('./utiles/fill-path');
 
-module.exports = (path, option = {}) => {
+const list = (path, option = {}) => {
     if(!option || typeof(option) !== 'object'){
         option = {};
     }
@@ -32,4 +32,8 @@ module.exports = (path, option = {}) => {
 
     fill_path(path, name, { ...option, ignores, filters, encoding, ignoreNames }, r);
     return r;
-}
+};
+
+module.exports = {
+    list
+};
