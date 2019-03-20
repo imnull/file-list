@@ -1,3 +1,4 @@
+const FS = require('fs');
 const fill_path = require('./utiles/fill-path');
 
 const list = (path, option = {}) => {
@@ -34,6 +35,19 @@ const list = (path, option = {}) => {
     return r;
 };
 
+const getFilesSize = (files) => files.reduce((a, file) => a + FS.statSync(file).size, 0);
+
+const size = (path, option = {}) => getFilesSize(list(path, option));
+
+const info = (path, option = {}) => {
+    let files = list(path, option);
+    let size = getFilesSize(files);
+    return { files, size };
+};
+
 module.exports = {
-    list
+    list,
+    size,
+    info,
+    getFilesSize
 };

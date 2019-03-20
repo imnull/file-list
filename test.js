@@ -1,15 +1,21 @@
-const { list } = require('./index');
+const { list, size, info } = require('./index');
 
 const start = Date.now();
-
-const r = list('./', {
+const path = './';
+const option = {
     filters: [
         '*.js',
     ],
     ignores: [
     ],
     ignoreHidden: false
-}).sort((a,b)=>a.localeCompare(b));
+};
+
+const r = list(path, option).sort((a,b)=>a.localeCompare(b));
+const s = size(path, option);
+
+const i = info(path, option);
 
 r.forEach(rr => console.log(rr))
-console.log(`${r.length} files ${Date.now() - start}ms`)
+console.log(`${r.length} files ${s} byte ${Date.now() - start}ms`);
+console.log(`info:`, i);
