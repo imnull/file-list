@@ -20,7 +20,7 @@ Get file-list of a path
 
 ## API
 
-    const { list, size, info } = require('filels');
+    const { list, size, info, create } = require('filels');
 
 ### list
 
@@ -33,6 +33,10 @@ Return only the size of the file-list of the path.
 ### info
 
 Return both list and size.
+
+### create
+
+create a `ListOperator` object. see [list-op.js](./list-op.js) 
 
 ## Path Name Filter
 
