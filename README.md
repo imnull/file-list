@@ -1,6 +1,10 @@
 # filels
 Get file-list of a path
 
+## install
+
+    $ npm i --save filels
+
 ## Quick start
 
     const { info } = require('filels');
