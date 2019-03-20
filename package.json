@@ -1,6 +1,6 @@
 {
   "name": "filels",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Get file-list of a path",
   "main": "index.js",
   "scripts": {
